@@ -82,6 +82,8 @@ Key Business Insights
 
 
 SQL Summary (Snowflake)
+
+
 •	SUM (), COUNT (), AVG () for key metrics
 
 •	CASE statements for hourly, weekly, seasonal categories
