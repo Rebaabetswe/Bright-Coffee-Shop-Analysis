@@ -18,12 +18,16 @@ Data Columns Provided
 
 •	Transportation ID
 •	Transaction date
+
 •	-Transaction time
 •	Transaction quantity
+
 •	Store ID & Location
 •	Product ID
+
 •	Unit Price
 •	Product type
+
 •	-Product category
 •	-Product details
 
