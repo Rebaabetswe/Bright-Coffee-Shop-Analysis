@@ -56,4 +56,5 @@ SQL Summary (Snowflake)
 - GROUP BY used with store, product, category, date, etc.
 
 Summary
+
 The sales data reveals consistent performance across all stores. However, there are measures that can be put in place to better and optimise operations. Campaigns, loyalty points and promotions may assist with attracting more customers. By understanding time and location-based trends we can adjust the inventory to better suit our customers therefore increasing sales.
