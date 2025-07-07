@@ -7,8 +7,11 @@ Bright Coffee Shop has appointed a new CEO. The CEO wants to grow the company's 
 Tools Used
 
 •	Miro: Planning flow and project map
+
 •	SQL (Snowflake): Aggregation, and transformations
+
 •	Excel: Chart creation and dashboard data visualization
+
 •	Microsoft PowerPoint: Final slide presentation design
 
 Data Columns Provided
@@ -27,22 +30,35 @@ Data Columns Provided
 Key Metrics Calculated
 
 •	Total Revenue per store and product
+
 •	Average Order Value (AOV)
+
 •	Transaction volume by time and location
+
 •	Weekly (Weekday vs Weekend) sales
+
 •	Seasonal Sales
+
 •	Hourly sales (Morning, Afternoon, Evening, Night)
+
 •	Top 5 and Bottom 5 Selling Products
+
 •	Product performance per store/location
+
 •	-Month-to-Month growth
 
 Visualisation and Chart types
 
 •	Month-to-month growth - Line Chart
+
 •	Top 5 and bottom 5 selling products - Pie Chart
+
 •	Store level activity	Stacked - column chart
+
 •	Hourly sales - Clustered bar chart
+
 •	Seasonal sales - Clustered column chart
+
 •	Average order value - Doughnut Chart
 
 Key Business Insights
@@ -58,8 +74,11 @@ Key Business Insights
 SQL Summary (Snowflake)
 
 •	SUM (), COUNT (), AVG () for key metrics
+
 •	CASE statements for hourly, weekly, seasonal categories
+
 •	TO_DATE () and TO_CHAR () for date formatting
+
 •	GROUP BY used with store, product, category, date, etc.
 
 Summary
