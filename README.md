@@ -19,7 +19,7 @@ Data Columns Provided
 •	Transportation ID
 •	Transaction date
 
-•	-Transaction time
+•	Transaction time
 •	Transaction quantity
 
 •	Store ID & Location
@@ -28,8 +28,8 @@ Data Columns Provided
 •	Unit Price
 •	Product type
 
-•	-Product category
-•	-Product details
+•	Product category
+•	Product details
 
 Key Metrics Calculated
 
