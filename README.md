@@ -1,15 +1,18 @@
 Bright Coffee shop analysis
 
 Introduction
+
 Bright Coffee Shop has appointed a new CEO. The CEO wants to grow the company's revenue and improve product performance. Using transcational data, this project highlights sales and product performance across three stores. It entails SQL-based data presentation, visualisation in Excel and a final presentaion using Microsoft PowerPoint. The aim is to extract business insights to support data-driven decisions. Objectives include to identify which products generate the most revenue, determine the time of day when the store performs best, explore sales trends across different products and time intervals, and provide data-driven recommendations to improve overall sales performance.
 
 Tools Used
+
 - Miro: Planning flow and project map
 - SQL (Snowflake): Aggregation, and transformations
 - Excel: Chart creation and dashboard data visualization
 - Microsoft PowerPoint: Final slide presentation design
 
 Data Columns Provided
+
 - Transportation ID
 - Transaction date
 -Transaction time
@@ -22,6 +25,7 @@ Data Columns Provided
 -Product details
 
 Key Metrics Calculated
+
 - Total Revenue per store and product
 - Average Order Value (AOV)
 - Transaction volume by time and location
@@ -33,6 +37,7 @@ Key Metrics Calculated
 -Month-to-Month growth
 
 Visualisation and Chart types
+
 .Month-to-month growth - Line Chart
 .Top 5 and bottom 5 selling products - Pie Chart
 .Store level activity	Stacked - column chart
@@ -41,6 +46,7 @@ Visualisation and Chart types
 Average order value - Doughnut Chart
 
 Key Business Insights
+
 1.	Autumn sales are highest across all stores, followed by Winter and Summer.
 2.	Morning hours generate the most revenue both weekdays and weekends, followed by afternoon. Weekends sales are the lowest.
 3.	Coffee and tea are the highest selling products across all stores.
@@ -50,6 +56,7 @@ Key Business Insights
 7.	Store-level product preferences vary with Coffee and tea consistently contributing the highest to the total revenue.
 
 SQL Summary (Snowflake)
+
 - SUM (), COUNT (), AVG () for key metrics
 - CASE statements for hourly, weekly, seasonal categories
 - TO_DATE () and TO_CHAR () for date formatting
