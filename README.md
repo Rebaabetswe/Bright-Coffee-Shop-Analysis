@@ -27,6 +27,7 @@ Data Columns Provided
 •	Product category
 •	Product details
 
+
 Key Metrics Calculated
 
 •	Total Revenue per store and product
@@ -47,6 +48,7 @@ Key Metrics Calculated
 
 •	-Month-to-Month growth
 
+
 Visualisation and Chart types
 
 •	Month-to-month growth - Line Chart
@@ -60,6 +62,7 @@ Visualisation and Chart types
 •	Seasonal sales - Clustered column chart
 
 •	Average order value - Doughnut Chart
+
 
 Key Business Insights
 
