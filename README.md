@@ -64,11 +64,17 @@ Visualisation and Chart types
 Key Business Insights
 
 •	Autumn sales are highest across all stores, followed by Winter and Summer.
+
 •	Morning hours generate the most revenue both weekdays and weekends, followed by afternoon. Weekends sales are the lowest.
+
 •	Coffee and tea are the highest selling products across all stores.
+
 •	Lower Manhattan contributes the highest total revenue, followed by Hell’s Kitchen.
+
 •	All stores are contributing evenly towards the Average Order Value.
+
 •	Total revenue grew steadily throughout the months and peaked in winter.
+
 •	Store-level product preferences vary with Coffee and tea consistently contributing the highest to the total revenue.
 
 SQL Summary (Snowflake)
