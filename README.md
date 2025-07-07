@@ -77,7 +77,9 @@ Key Business Insights
 
 •	Store-level product preferences vary with Coffee and tea consistently contributing the highest to the total revenue.
 
+
 SQL Summary (Snowflake)
+
 
 •	SUM (), COUNT (), AVG () for key metrics
 
