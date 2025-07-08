@@ -1,0 +1,94 @@
+SELECT * FROM COFFEESHOPSALES.SALEANALYSISCOFFEE.BRIGHTCOFFEESHOP;
+
+-- 1. Total Revenue
+SELECT 
+  store_location,
+  SUM(TRANSACTION_QTY * unit_price) AS total_revenue
+FROM COFFEESHOPSALES.SALEANALYSISCOFFEE.BRIGHTCOFFEESHOP;
+
+-- 2. Top 5 Selling Products
+SELECT 
+  product_detail,
+  SUM(TRANSACTION_QTY) AS units_sold
+FROM COFFEESHOPSALES.SALEANALYSISCOFFEE.BRIGHTCOFFEESHOP
+GROUP BY product_detail;
+
+-- 3. Bottom 5 Selling Products
+SELECT 
+  product_detail,
+  SUM(TRANSACTION_QTY) AS units_sold
+FROM COFFEESHOPSALES.SALEANALYSISCOFFEE.BRIGHTCOFFEESHOP
+GROUP BY product_detail;
+
+-- 4. Transactions per Store
+SELECT 
+  store_location,
+  COUNT(DISTINCT transportation_id) AS number_of_transactions
+FROM COFFEESHOPSALES.SALEANALYSISCOFFEE.BRIGHTCOFFEESHOP
+GROUP BY store_location;
+
+-- 5. Average Order Value by Store
+SELECT 
+  store_location,
+  SUM(TRANSACTION_QTY * unit_price) / COUNT(DISTINCT TRANSACTION_ID) AS average_order_value
+FROM COFFEESHOPSALES.SALEANALYSISCOFFEE.BRIGHTCOFFEESHOP
+GROUP BY store_location;
+
+-- 6. Month-to-Month Revenue Growth
+SELECT 
+  TO_CHAR(TO_DATE(transaction_date, 'DD/MM/YYYY'), 'Mon'
+FROM COFFEESHOPSALES.SALEANALYSISCOFFEE.BRIGHTCOFFEESHOP
+GROUP BY TO_CHAR(TO_DATE(transaction_date, 'DD/MM/YYYY'), 'Mon';
+
+--7. Hourly Sales by Time of Day
+CASE
+  WHEN TRANSACTION_TIME BETWEEN '06:00:00' AND '11:59:59' THEN 'Morning'
+  WHEN TRANSACTION_TIME BETWEEN '12:00:00' AND '16:59:59' THEN 'Afternoon'
+  WHEN TRANSACTION_TIME BETWEEN '17:00:00' AND '20:00:00' THEN 'Evening'
+  ELSE 'Night'
+  END AS Time_bucket,
+
+--8. Seasonal sales
+CASE
+WHEN Month_number BETWEEN 3 AND 5 THEN 'Autumn'
+WHEN Month_number BETWEEN 6 AND 8 THEN 'Winter'
+WHEN Month_number BETWEEN 9 AND 10 THEN 'Spring'
+ELSE 'Summer'
+END AS Seasons,
+
+--9. Day type
+WHEN DAYOFWEEK(TO_DATE(transaction_date, 'DD/MM/YYYY')) IN (1, 7) THEN 'Weekend'
+    ELSE 'Weekday'
+    END AS Day_type,
+    
+--Final code
+    
+SELECT
+product_type,store_location,product_category,
+  SUM(TRANSACTION_QTY * unit_price) AS total_revenue,
+  SUM(TRANSACTION_QTY) AS units_sold,
+  SUM(TRANSACTION_QTY * unit_price) / COUNT(DISTINCT TRANSACTION_ID) AS average_order_value,
+  COUNT(DISTINCT transaction_id) AS number_of_transactions,
+  
+  CASE
+  WHEN TRANSACTION_TIME BETWEEN '06:00:00' AND '11:59:59' THEN 'Morning'
+  WHEN TRANSACTION_TIME BETWEEN '12:00:00' AND '16:59:59' THEN 'Afternoon'
+  WHEN TRANSACTION_TIME BETWEEN '17:00:00' AND '20:00:00' THEN 'Evening'
+  ELSE 'Night'
+  END AS Time_bucket,
+  CASE
+  WHEN DAYOFWEEK(TO_DATE(transaction_date, 'DD/MM/YYYY')) IN (1, 7) THEN 'Weekend'
+    ELSE 'Weekday'
+    END AS Day_type,
+  TO_CHAR(TO_DATE(transaction_date, 'DD/MM/YYYY'), 'Mon') AS Month_id,
+  TO_CHAR(TO_DATE(transaction_date, 'DD/MM/YYYY'), 'MM') AS Month_number,
+CASE
+WHEN Month_number BETWEEN 3 AND 5 THEN 'Autumn'
+WHEN Month_number BETWEEN 6 AND 8 THEN 'Winter'
+WHEN Month_number BETWEEN 9 AND 10 THEN 'Spring'
+ELSE 'Summer'
+END AS Seasons,
+FROM COFFEESHOPSALES.SALEANALYSISCOFFEE.BRIGHTCOFFEESHOP
+GROUP BY product_type, store_location, Time_bucket, Day_type, transaction_date,product_category,
+Month_id, Month_number, Seasons
+ORDER BY units_sold DESC;
